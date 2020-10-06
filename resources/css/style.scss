@@ -1,0 +1,907 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #3c3a3a;
+    font-size: 16px;
+    font-family: 'OpenSans-Regular';
+}
+
+a {
+    text-decoration: none;
+    color: #0e2231;
+    font-weight: 600;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+h2 {
+    color: #0e2231;
+    font-size: 30px;
+    font-family: 'OpenSans-Bold';
+    text-align: center;
+    margin: 55px 0 25px;
+}
+
+.container {
+    max-width: 1240px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.text {
+    margin-bottom: 25px;
+}
+
+.title-site {
+    position: absolute;
+    top: 180px;
+    color: #ffffff;
+    font-size: 33px;
+    display: none;
+
+    span {
+        font-size: 18px;
+        font-family: 'OpenSans-Light';
+    }
+}
+
+.home {
+
+    .title-site {
+        position: absolute;
+        top: 180px;
+        color: #ffffff;
+        font-size: 33px;
+        display: block;
+
+
+        span {
+            font-size: 18px;
+            font-family: 'OpenSans-Light';
+        }
+    }
+}
+
+.post-page {
+
+    ul {
+        margin: 0 20px 30px;
+    }
+}
+
+header {
+    background: rgba(0, 0, 0, .85);
+    position: relative;
+    z-index: 1;
+
+
+    .top-header-container {
+        width: 100%;
+        background: #1E283A;
+
+        .top-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            span {
+                display: block;
+                color: #ffffff;
+                line-height: 30px;
+            }
+        }
+    }
+
+    .header {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        nav {
+            position: relative;
+            width: 100%;
+
+            #burgem-menu-icon {
+                width: 36px;
+                height: 30px;
+                display: none;
+                position: absolute;
+                top: -16px;
+                right: 0;
+                justify-content: space-between;
+                flex-direction: column;
+                cursor: pointer;
+
+                span {
+                    display: block;
+                    width: 100%;
+                    height: 4px;
+                    background: #ffffff;
+                }
+
+                &.active {
+                    display: flex;
+                }
+            }
+
+            #close-burgem-menu-icon {
+                display: none;
+                font-size: 60px;
+                line-height: 36px;
+                position: absolute;
+                top: -19px;
+                right: 0;
+                z-index: 2;
+                cursor: pointer;
+
+                &.active {
+                    display: flex;
+                }
+            }
+
+            ul {
+                list-style: none;
+                display: none;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 10px;
+                height: 100px;
+
+                &.active {
+                    display: flex;
+                }
+
+                .item-navigation {
+                    margin: 0 14px;
+                    padding: 15px 0;
+                    text-align: center;
+                    position: relative;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+
+                        ul {
+                            left: auto;
+                            right: 0;
+                        }
+                    }
+
+                    a {
+                        color: #ffffff;
+                        font-size: 13px;
+                    }
+
+                    ul {
+                        display: none;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        width: 300px;
+                        background: #000000;
+                        text-align: left;
+                        padding: 15px;
+                        height: auto;
+                        border-radius: 4px;
+
+                        li {
+                            padding: 10px 0;
+                        }
+                    }
+
+                    &.item-navigation-with-subcategory:hover {
+
+                        ul {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.home-main-slider {
+    height: 450px;
+    position: relative;
+
+    .kv-slide {
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    .home-main-slider-nav {
+        position: absolute;
+        top: 205px;
+        left: 0;
+        width: 100%;
+        height: 0;
+
+        button {
+            position: absolute;
+            top: 0;
+            font-size: 40px;
+            color: #ffffff;
+
+            &:first-child {
+                left: 25px;
+            }
+
+            &:last-child {
+                right: 25px;
+            }
+        }
+    }
+}
+
+#service {
+
+    table {
+        width: 100%;
+        border: 1px solid #000000;
+        margin-bottom: 40px;
+
+        tr {
+
+            td, th {
+                padding: 10px 15px;
+                border: 1px solid #000;
+                font-size: 14px;
+            }
+
+            th {
+                font-family: 'OpenSans-ExtraBoldItalic';
+                font-size: 18px;
+            }
+        }
+    }
+
+    .container-images {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+
+        > div {
+            width: 15%;
+            height: 150px;
+            margin: 0 5px 10px;
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+        }
+    }
+}
+
+#project {
+
+    .container {
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        > ul {
+            margin-left: 20px;
+            list-style-type: disc;
+
+            li {
+
+                ul {
+                    margin-left: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        .container-images {
+            display: flex;
+
+            > div {
+                width: 31%;
+                height: 300px;
+                margin: 30px 1% 0;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+}
+
+#sendMassage {
+
+    form {
+        max-width: 1100px;
+        width: 100%;
+        margin: auto;
+
+        > div {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 20px;
+
+            &.full-size {
+                display: block;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 5px;
+
+                &:after {
+                    content: '*';
+                    display: inline-block;
+                    margin-left: 5px;
+                    color: red;
+                }
+            }
+
+            input {
+                width: 100%;
+                display: block;
+                padding: 7px 12px;
+            }
+
+            textarea {
+                resize: none;
+                width: 100%;
+            }
+
+            div {
+                width: 48%;
+            }
+        }
+
+        button {
+            background: #0e2231;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 30px;
+            border-radius: 4px;
+            display: block;
+            margin: 30px auto;
+        }
+    }
+}
+
+#aboutUs {
+
+    .about-bottom-container {
+        display: flex;
+        justify-content: space-evenly;
+
+        a {
+            width: 31%;
+            margin: 15px 1% 30px;
+            padding: 30px 15px;
+            text-align: center;
+            border: 1px solid #0e2231;
+            cursor: pointer;
+
+            .figure-image {
+                width: 70%;
+                height: 300px;
+                margin: auto;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            span {
+                display: block;
+                font-size: 20px;
+                color: #0e2231;
+                font-family: 'OpenSans-Bold';
+                font-weight: bold;
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+.electrical-labolatory {
+    display: flex;
+    justify-content: space-between;
+
+    > div {
+        width: 31%;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.sertification-container {
+
+    img {
+        display: block;
+        margin: 0 auto 40px;
+    }
+}
+
+.station-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    div {
+        margin: 10px 10px ;
+        width: 200px;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+footer {
+    width: 100%;
+    background: rgba(0,0,0, .85);
+    color: #ffffff;
+    padding: 30px 0;
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo-footer {
+            color: #ffffff;
+            font-size: 30px;
+        }
+
+        .footer-contacts {
+            display: flex;
+            align-items: center;
+
+            > div {
+                margin-right: 50px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                h4 {
+                    text-align: center;
+                    font-size: 18px;
+                }
+
+                span {
+                    color: #beacac;
+                }
+            }
+        }
+    }
+}
+
+#sendMassage {
+
+    table {
+        width: 100%;
+
+        tr {
+
+            td, th {
+                padding: 5px 10px;
+            }
+        }
+    }
+
+    h5 {
+        display: block;
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    form {
+
+         > div {
+            display: flex;
+             align-items: center;
+
+             &:first-child {
+
+                 label {
+                     width: 130px;
+                 }
+             }
+
+             div {
+                 display: flex;
+             }
+
+             &:nth-child(2) {
+
+                 label {
+                     width: 300px;
+                 }
+
+                 div {
+                     display: flex;
+                     align-items: center;
+
+                     &:last-child {
+
+                         label {
+                             width: 140px;
+                         }
+                     }
+                 }
+             }
+        }
+
+        input[type="submit"] {
+            display: block;
+            padding: 7px 25px;
+            background: rgba(0, 0, 0, .85);
+            color: #fff;
+            font-size: 20px;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+            margin: auto;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .title-site {
+        display: block;
+    }
+
+    header {
+
+        .top-header {
+
+            span {
+                font-size: 13px;
+            }
+        }
+
+        .header {
+            height: 70px;
+
+            .container-main-navigation {
+
+                #burgem-menu-icon {
+                    display: flex;
+                }
+
+                .main-navigation {
+                    position: fixed;
+                    width: 108%;
+                    height: 100vh;
+                    top: 0px;
+                    left: -14px;
+                    background: #fff;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: start;
+                    overflow: hidden;
+                    padding-left: 7%;
+
+                    .item-navigation {
+
+                        &:first-child {
+                            margin-left: 14px;
+                        }
+
+                        a {
+                            color: #000;
+                            font-size: 16px;
+
+                            &:hover {
+                                color: #8f8282;
+                            }
+                        }
+
+                        ul {
+                            width: 100%;
+                            position: static;
+                            background: transparent;
+                            list-style: circle;
+                            border: 1px solid #000;
+                            margin-top: 20px;
+                            padding-left: 32px;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+
+            .title-site {
+                top: 40px;
+                font-size: 20px;
+
+                span {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    footer {
+
+        .footer {
+            flex-direction: column;
+
+            .logo-footer {
+                margin-bottom: 15px;
+            }
+
+            .footer-contacts {
+
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+
+    #aboutUs {
+
+        .about-bottom-container {
+
+            a {
+
+                .figure-image {
+                    width: 100%;
+                    height: 240px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .home-main-slider {
+        height: 300px;
+
+        .home-main-slider-nav {
+            top: 125px;
+        }
+    }
+
+    #service {
+
+        .container-images {
+
+            > div {
+                width: 31%;
+            }
+        }
+    }
+
+    #project {
+
+        .container {
+
+            .container-images {
+
+                > div {
+                    height: 200px;
+                }
+            }
+        }
+    }
+
+    #aboutUs {
+
+        .about-bottom-container {
+
+            a {
+
+                .figure-image {
+                    height: 130px;
+                }
+            }
+        }
+    }
+
+    .electrical-labolatory {
+        flex-direction: column;
+
+        > div {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    #project {
+
+        .container {
+
+            .container-images {
+                flex-direction: column;
+                align-items: center;
+
+                > div {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    #service {
+
+        .container-images {
+
+            > div {
+                width: 30%;
+                height: 100px;
+            }
+        }
+    }
+
+    #aboutUs {
+
+        .about-bottom-container {
+            flex-direction: column;
+
+            a {
+                width: 100%;
+
+                .figure-image {
+                    width: 60%;
+                }
+            }
+        }
+    }
+
+    #sendMassage {
+
+        form {
+
+            > div {
+                flex-direction: column;
+
+                div {
+                    width: 100%;
+                    flex-direction: column;
+                    margin-bottom: 20px;
+                }
+
+                label {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+
+    #service {
+
+        table {
+
+            tr {
+
+                td, th {
+                    padding: 2px 5px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    #sendMassage table tr td, #sendMassage table tr th {
+        padding: 2px 4px;
+        font-size: 12px;
+    }
+
+    footer .footer {
+
+        .logo-footer {
+            font-size: 26px;
+        }
+
+        .footer-contacts {
+            flex-direction: column;
+
+            > div {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    #close-burgem-menu-icon {
+        top: -50px;
+    }
+
+    header .header .container-main-navigation .main-navigation .item-navigation a {
+        font-size: 13px;
+    }
+
+    header .header .container-main-navigation .main-navigation {
+        padding-top: 65px;
+        padding-right: 60px;
+    }
+
+    header .header nav ul .item-navigation {
+        padding: 8px 0;
+        text-align: left;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+
+    header {
+
+        .top-header span {
+            font-size: 10px;
+        }
+
+        .header {
+
+            .title-site {
+                top: 43px;
+                font-size: 16px;
+
+                span {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    .home-main-slider {
+        height: 220px;
+
+        .home-main-slider-nav {
+            top: 80px;
+        }
+    }
+
+    .station-container div {
+        width: 88px;
+        height: 88px;
+    }
+}
+
+
+@media screen and (max-width: 410px) {
+
+    #sendMassage table tr th {
+        font-size: 10px;
+    }
+    #sendMassage table tr td, #sendMassage table tr th {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,763 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #3c3a3a;
+  font-size: 16px;
+  font-family: 'OpenSans-Regular';
+}
+
+a {
+  text-decoration: none;
+  color: #0e2231;
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+h2 {
+  color: #0e2231;
+  font-size: 30px;
+  font-family: 'OpenSans-Bold';
+  text-align: center;
+  margin: 55px 0 25px;
+}
+
+.container {
+  max-width: 1240px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.text {
+  margin-bottom: 25px;
+}
+
+.title-site {
+  position: absolute;
+  top: 180px;
+  color: #ffffff;
+  font-size: 33px;
+  display: none;
+}
+
+.title-site span {
+  font-size: 18px;
+  font-family: 'OpenSans-Light';
+}
+
+.home .title-site {
+  position: absolute;
+  top: 180px;
+  color: #ffffff;
+  font-size: 33px;
+  display: block;
+}
+
+.home .title-site span {
+  font-size: 18px;
+  font-family: 'OpenSans-Light';
+}
+
+.post-page ul {
+  margin: 0 20px 30px;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.85);
+  position: relative;
+  z-index: 1;
+}
+
+header .top-header-container {
+  width: 100%;
+  background: #1E283A;
+}
+
+header .top-header-container .top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .top-header-container .top-header span {
+  display: block;
+  color: #ffffff;
+  line-height: 30px;
+}
+
+header .header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .header nav {
+  position: relative;
+  width: 100%;
+}
+
+header .header nav #burgem-menu-icon {
+  width: 36px;
+  height: 30px;
+  display: none;
+  position: absolute;
+  top: -16px;
+  right: 0;
+  justify-content: space-between;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+header .header nav #burgem-menu-icon span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #ffffff;
+}
+
+header .header nav #burgem-menu-icon.active {
+  display: flex;
+}
+
+header .header nav #close-burgem-menu-icon {
+  display: none;
+  font-size: 60px;
+  line-height: 36px;
+  position: absolute;
+  top: -19px;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+header .header nav #close-burgem-menu-icon.active {
+  display: flex;
+}
+
+header .header nav ul {
+  list-style: none;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  height: 100px;
+}
+
+header .header nav ul.active {
+  display: flex;
+}
+
+header .header nav ul .item-navigation {
+  margin: 0 14px;
+  padding: 15px 0;
+  text-align: center;
+  position: relative;
+}
+
+header .header nav ul .item-navigation:first-child {
+  margin-left: 0;
+}
+
+header .header nav ul .item-navigation:last-child {
+  margin-right: 0;
+}
+
+header .header nav ul .item-navigation:last-child ul {
+  left: auto;
+  right: 0;
+}
+
+header .header nav ul .item-navigation a {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+header .header nav ul .item-navigation ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 300px;
+  background: #000000;
+  text-align: left;
+  padding: 15px;
+  height: auto;
+  border-radius: 4px;
+}
+
+header .header nav ul .item-navigation ul li {
+  padding: 10px 0;
+}
+
+header .header nav ul .item-navigation.item-navigation-with-subcategory:hover ul {
+  display: block;
+}
+
+.home-main-slider {
+  height: 450px;
+  position: relative;
+}
+
+.home-main-slider .kv-slide {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+}
+
+.home-main-slider .kv-slide.active {
+  display: block;
+}
+
+.home-main-slider .home-main-slider-nav {
+  position: absolute;
+  top: 205px;
+  left: 0;
+  width: 100%;
+  height: 0;
+}
+
+.home-main-slider .home-main-slider-nav button {
+  position: absolute;
+  top: 0;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+.home-main-slider .home-main-slider-nav button:first-child {
+  left: 25px;
+}
+
+.home-main-slider .home-main-slider-nav button:last-child {
+  right: 25px;
+}
+
+#service table {
+  width: 100%;
+  border: 1px solid #000000;
+  margin-bottom: 40px;
+}
+
+#service table tr td,
+#service table tr th {
+  padding: 10px 15px;
+  border: 1px solid #000;
+  font-size: 14px;
+}
+
+#service table tr th {
+  font-family: 'OpenSans-ExtraBoldItalic';
+  font-size: 18px;
+}
+
+#service .container-images {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+#service .container-images > div {
+  width: 15%;
+  height: 150px;
+  margin: 0 5px 10px;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+#project .container p {
+  margin-bottom: 10px;
+}
+
+#project .container > ul {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+#project .container > ul li ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+#project .container .container-images {
+  display: flex;
+}
+
+#project .container .container-images > div {
+  width: 31%;
+  height: 300px;
+  margin: 30px 1% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#sendMassage form {
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+}
+
+#sendMassage form > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#sendMassage form > div.full-size {
+  display: block;
+}
+
+#sendMassage form > div label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#sendMassage form > div label:after {
+  content: '*';
+  display: inline-block;
+  margin-left: 5px;
+  color: red;
+}
+
+#sendMassage form > div input {
+  width: 100%;
+  display: block;
+  padding: 7px 12px;
+}
+
+#sendMassage form > div textarea {
+  resize: none;
+  width: 100%;
+}
+
+#sendMassage form > div div {
+  width: 48%;
+}
+
+#sendMassage form button {
+  background: #0e2231;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 30px;
+  border-radius: 4px;
+  display: block;
+  margin: 30px auto;
+}
+
+#aboutUs .about-bottom-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#aboutUs .about-bottom-container a {
+  width: 31%;
+  margin: 15px 1% 30px;
+  padding: 30px 15px;
+  text-align: center;
+  border: 1px solid #0e2231;
+  cursor: pointer;
+}
+
+#aboutUs .about-bottom-container a .figure-image {
+  width: 70%;
+  height: 300px;
+  margin: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#aboutUs .about-bottom-container a span {
+  display: block;
+  font-size: 20px;
+  color: #0e2231;
+  font-family: 'OpenSans-Bold';
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.electrical-labolatory {
+  display: flex;
+  justify-content: space-between;
+}
+
+.electrical-labolatory > div {
+  width: 31%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sertification-container img {
+  display: block;
+  margin: 0 auto 40px;
+}
+
+.station-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.station-container div {
+  margin: 10px 10px;
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+footer {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  color: #ffffff;
+  padding: 30px 0;
+}
+
+footer .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .footer .logo-footer {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+footer .footer .footer-contacts {
+  display: flex;
+  align-items: center;
+}
+
+footer .footer .footer-contacts > div {
+  margin-right: 50px;
+}
+
+footer .footer .footer-contacts > div:last-child {
+  margin-right: 0;
+}
+
+footer .footer .footer-contacts > div h4 {
+  text-align: center;
+  font-size: 18px;
+}
+
+footer .footer .footer-contacts > div span {
+  color: #beacac;
+}
+
+#sendMassage table {
+  width: 100%;
+}
+
+#sendMassage table tr td,
+#sendMassage table tr th {
+  padding: 5px 10px;
+}
+
+#sendMassage h5 {
+  display: block;
+  font-size: 20px;
+  padding: 20px;
+}
+
+#sendMassage form > div {
+  display: flex;
+  align-items: center;
+}
+
+#sendMassage form > div:first-child label {
+  width: 130px;
+}
+
+#sendMassage form > div div {
+  display: flex;
+}
+
+#sendMassage form > div:nth-child(2) label {
+  width: 300px;
+}
+
+#sendMassage form > div:nth-child(2) div {
+  display: flex;
+  align-items: center;
+}
+
+#sendMassage form > div:nth-child(2) div:last-child label {
+  width: 140px;
+}
+
+#sendMassage form input[type="submit"] {
+  display: block;
+  padding: 7px 25px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  font-size: 20px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  margin: auto;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .title-site {
+    display: block;
+  }
+
+  header .top-header span {
+    font-size: 13px;
+  }
+
+  header .header {
+    height: 70px;
+  }
+
+  header .header .container-main-navigation #burgem-menu-icon {
+    display: flex;
+  }
+
+  header .header .container-main-navigation .main-navigation {
+    position: fixed;
+    width: 108%;
+    height: 100vh;
+    top: 0px;
+    left: -14px;
+    background: #fff;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    overflow: hidden;
+    padding-left: 7%;
+  }
+
+  header .header .container-main-navigation .main-navigation .item-navigation:first-child {
+    margin-left: 14px;
+  }
+
+  header .header .container-main-navigation .main-navigation .item-navigation a {
+    color: #000;
+    font-size: 16px;
+  }
+
+  header .header .container-main-navigation .main-navigation .item-navigation a:hover {
+    color: #8f8282;
+  }
+
+  header .header .container-main-navigation .main-navigation .item-navigation ul {
+    width: 100%;
+    position: static;
+    background: transparent;
+    list-style: circle;
+    border: 1px solid #000;
+    margin-top: 20px;
+    padding-left: 32px;
+    margin-left: 5px;
+  }
+
+  header .header .title-site {
+    top: 40px;
+    font-size: 20px;
+  }
+
+  header .header .title-site span {
+    font-size: 13px;
+  }
+
+  footer .footer {
+    flex-direction: column;
+  }
+
+  footer .footer .logo-footer {
+    margin-bottom: 15px;
+  }
+
+  footer .footer .footer-contacts span {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #aboutUs .about-bottom-container a .figure-image {
+    width: 100%;
+    height: 240px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home-main-slider {
+    height: 300px;
+  }
+
+  .home-main-slider .home-main-slider-nav {
+    top: 125px;
+  }
+
+  #service .container-images > div {
+    width: 31%;
+  }
+
+  #project .container .container-images > div {
+    height: 200px;
+  }
+
+  #aboutUs .about-bottom-container a .figure-image {
+    height: 130px;
+  }
+
+  .electrical-labolatory {
+    flex-direction: column;
+  }
+
+  .electrical-labolatory > div {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #project .container .container-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #project .container .container-images > div {
+    width: 80%;
+  }
+
+  #service .container-images > div {
+    width: 30%;
+    height: 100px;
+  }
+
+  #aboutUs .about-bottom-container {
+    flex-direction: column;
+  }
+
+  #aboutUs .about-bottom-container a {
+    width: 100%;
+  }
+
+  #aboutUs .about-bottom-container a .figure-image {
+    width: 60%;
+  }
+
+  #sendMassage form > div {
+    flex-direction: column;
+  }
+
+  #sendMassage form > div div {
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  #sendMassage form > div label {
+    width: 100% !important;
+  }
+
+  #service table tr td,
+  #service table tr th {
+    padding: 2px 5px;
+    font-size: 12px;
+  }
+
+  #sendMassage table tr td,
+  #sendMassage table tr th {
+    padding: 2px 4px;
+    font-size: 12px;
+  }
+
+  footer .footer .logo-footer {
+    font-size: 26px;
+  }
+
+  footer .footer .footer-contacts {
+    flex-direction: column;
+  }
+
+  footer .footer .footer-contacts > div {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  #close-burgem-menu-icon {
+    top: -50px;
+  }
+
+  header .header .container-main-navigation .main-navigation .item-navigation a {
+    font-size: 13px;
+  }
+
+  header .header .container-main-navigation .main-navigation {
+    padding-top: 65px;
+    padding-right: 60px;
+  }
+
+  header .header nav ul .item-navigation {
+    padding: 8px 0;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header .top-header span {
+    font-size: 10px;
+  }
+
+  header .header .title-site {
+    top: 43px;
+    font-size: 16px;
+  }
+
+  header .header .title-site span {
+    font-size: 10px;
+  }
+
+  .home-main-slider {
+    height: 220px;
+  }
+
+  .home-main-slider .home-main-slider-nav {
+    top: 80px;
+  }
+
+  .station-container div {
+    width: 88px;
+    height: 88px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  #sendMassage table tr th {
+    font-size: 10px;
+  }
+
+  #sendMassage table tr td,
+  #sendMassage table tr th {
+    font-size: 10px;
+  }
+}
+
